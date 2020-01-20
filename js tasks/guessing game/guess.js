@@ -1,16 +1,19 @@
 //create secretNumber
 var secretNumber = 24;
 
-//ask user for guess
-var guess = prompt("Guess a number");
+//asks user for guess
+var stringGuess = prompt("Guess a number");
+//converts the input from string to number
+var guess = Number(stringGuess);
 
-//check if number is right
-
-if (Number(guess) === secretNumber) { // Number(guess) is used to convert the user's input to a number before comparison with the secret number occurs
-    alert("YOU GOT IT RIGHT");
+//checks if guess is right
+if(guess === secretNumber) {
+    alert("YOU GOT IT RITGHT");
 }
-
+//checks if guess is higher
+else if(guess > secretNumber){
+    alert("Too high. Guess again.");
+}
 else {
-    alert("ooopps! \nTry again.");
+    alert("Too low. Guess again!");
 }
-//return prompt();
